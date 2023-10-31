@@ -1,2 +1,17 @@
 <h1>{{title}}</h1>
 <p>Welcome to {{title}}</p>
+{{#each messages}}
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="text-muted">
+      {{this.added}}
+    </div>
+    {{this.user}}
+  </div>
+  <div class="panel-body">
+    {{this.text}}
+  </div>
+</div>
+
+{{/each}}
+<a href="/new" class="btn btn-primary mt-4">Add new message</a>
